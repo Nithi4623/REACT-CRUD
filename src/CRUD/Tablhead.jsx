@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Create } from './Create'
 
-export const Tablhead = ( props) => {
+export const Tablhead = ( {item , setUserData}) => {
+  console.log(item , "hgjhgjhgjhgjh");
+  
     const [openModel, setOpenModel]=useState(false)
 
   return (
@@ -22,7 +24,8 @@ export const Tablhead = ( props) => {
    
   
   
-    <Create setUserData={props.setUserData} setOpenModel={setOpenModel}
+    <Create setUserData={setUserData} setOpenModel={setOpenModel}
+    items={item}
    />}
 
   

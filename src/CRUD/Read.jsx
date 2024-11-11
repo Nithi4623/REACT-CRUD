@@ -4,6 +4,9 @@ import { Tablhead } from './Tablhead'
 
 export const Read = () => {
      const [userData ,setUserData]=useState([])
+     const [update,setupdata]=useState({})
+     console.log(userData,"kgjhg");
+     
    
       
   return (
@@ -18,7 +21,9 @@ export const Read = () => {
       } */}
         
 <div>
-    <Tablhead setUserData={setUserData}/>
+    <Tablhead setUserData={setUserData} item={update}
+    
+    />
 </div>
 
   {userData.map((item )=>{
@@ -28,6 +33,7 @@ export const Read = () => {
                 {item.name}
 
          {item.age}
+         <button onClick={()=>{setupdata(item)}}>update</button>
          </div>
        
       
